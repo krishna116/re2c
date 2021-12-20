@@ -70,6 +70,9 @@ IRC channels:
 
 You are welcome to ask for help or share your thoughts and ideas.
 
+Other
+-----
+[Modern-re2c-tutorials](https://github.com/krishna116/modern-re2c-tutorials)  
 
 AUTHORS
 -------
