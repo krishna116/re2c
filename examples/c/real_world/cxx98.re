@@ -195,12 +195,12 @@ static bool lex(input_t &in)
             }
 
             // macros
-            macro = ("#" | "%:") ([^\n] | "\\\n")* "\n";
+            macro = ("#" | "%:") ([^\n\x00] | "\\\n")* "\n";
             macro { continue; }
 
             // whitespaces
-            mcm = "/*" ([^*] | ("*" [^/]))* "*""/";
-            scm = "//" [^\n]* "\n";
+            mcm = "/*" ([^*\x00] | ("*" [^/\x00]))* "*""/";
+            scm = "//" [^\n\x00]* "\n";
             wsp = ([ \t\v\n\r] | scm | mcm)+;
             wsp { fprintf(stderr, " "); continue; }
 
